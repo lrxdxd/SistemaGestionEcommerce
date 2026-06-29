@@ -1,0 +1,75 @@
+{{define "content"}}
+
+<h2 class="mb-4">Gestión de Ventas</h2>
+
+<div class="mb-3">
+
+    <a href="/ventas/crear" class="btn btn-primary">
+
+        Registrar Venta
+
+    </a>
+
+</div>
+
+<table class="table table-bordered table-striped">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Usuario</th>
+
+            <th>Producto</th>
+
+            <th>Cantidad</th>
+
+            <th>Total</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+    {{if .}}
+
+        {{range .}}
+
+        <tr>
+
+            <td>{{.ID}}</td>
+
+            <td>{{.Usuario}}</td>
+
+            <td>{{.Producto}}</td>
+
+            <td>{{.Cantidad}}</td>
+
+            <td>${{printf "%.2f" .Total}}</td>
+
+        </tr>
+
+        {{end}}
+
+    {{else}}
+
+        <tr>
+
+            <td colspan="5" class="text-center">
+
+                No existen ventas registradas.
+
+            </td>
+
+        </tr>
+
+    {{end}}
+
+    </tbody>
+
+</table>
+
+{{end}}

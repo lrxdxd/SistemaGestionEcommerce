@@ -1,0 +1,51 @@
+{{define "content"}}
+
+<h2 class="mb-4">Registrar Usuario</h2>
+
+<form method="POST" action="/usuarios/crear">
+
+    <div class="mb-3">
+
+        <label class="form-label">
+            Nombre
+        </label>
+
+        <input
+            type="text"
+            class="form-control"
+            name="nombre"
+            placeholder="Ingrese el nombre"
+            required>
+
+    </div>
+
+    <div class="mb-3">
+
+        <label class="form-label">
+            Email
+        </label>
+
+        <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Ingrese el email"
+            required>
+
+    </div>
+
+    <button type="submit" class="btn btn-success">
+
+        Guardar
+
+    </button>
+
+    <a href="/usuarios" class="btn btn-secondary">
+
+        Cancelar
+
+    </a>
+
+</form>
+
+{{end}}

@@ -1,9 +1,9 @@
-package main
+package models
 
 type Venta struct {
-	id       int
-	usuario  *Usuario
-	producto *Producto
-	cantidad int
-	total    float64
+	ID         int
+	UsuarioID  int
+	ProductoID int
+	Cantidad   int
+	Total      float64
 }

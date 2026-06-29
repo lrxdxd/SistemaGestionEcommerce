@@ -1,0 +1,65 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sistema de Gestión Ecommerce</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="/">
+            🛒 Ecommerce
+        </a>
+
+        <div class="navbar-nav ms-auto">
+
+            <a class="nav-link" href="/">Inicio</a>
+
+            <a class="nav-link" href="/usuarios">Usuarios</a>
+
+            <a class="nav-link" href="/productos">Productos</a>
+
+            <a class="nav-link" href="/ventas">Ventas</a>
+
+            <a class="nav-link" href="/reportes">Reportes</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container mt-4 flex-grow-1">
+
+    {{template "content" .}}
+
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+
+    <strong>Sistema de Gestión Ecommerce</strong><br>
+
+    Proyecto Final de Programación Orientada a Objetos<br>
+
+    Universidad Internacional del Ecuador (UIDE)<br>
+
+    © 2026
+
+</footer>
+</body>
+
+</html>
+{{end}}

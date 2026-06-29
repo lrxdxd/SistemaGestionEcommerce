@@ -1,0 +1,51 @@
+{{define "content"}}
+
+<h2 class="mb-4">
+Reporte General
+</h2>
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<table class="table">
+
+<tr>
+
+<th>Usuarios Registrados</th>
+
+<td>{{.Usuarios}}</td>
+
+</tr>
+
+<tr>
+
+<th>Productos Registrados</th>
+
+<td>{{.Productos}}</td>
+
+</tr>
+
+<tr>
+
+<th>Ventas Realizadas</th>
+
+<td>{{.Ventas}}</td>
+
+</tr>
+
+<tr>
+
+<th>Ingresos Totales</th>
+
+<td>${{printf "%.2f" .Ingresos}}</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+{{end}}

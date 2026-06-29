@@ -1,0 +1,99 @@
+{{define "content"}}
+
+<h2 class="mb-4">
+    📊 Dashboard
+</h2>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+
+        <div class="card text-center shadow border-0 bg-primary text-white">
+
+            <div class="card-body">
+
+                <h5>👤 Usuarios</h5>
+
+                <h2>{{.Usuarios}}</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card text-center shadow border-0 bg-success text-white">
+
+            <div class="card-body">
+
+                <h5>📦 Productos</h5>
+
+                <h2>{{.Productos}}</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card text-center shadow border-0 bg-warning">
+
+            <div class="card-body">
+
+                <h5>🛒 Ventas</h5>
+
+                <h2>{{.Ventas}}</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card text-center shadow border-0 bg-danger text-white">
+
+            <div class="card-body">
+
+                <h5>💰 Ingresos</h5>
+
+                <h2>${{printf "%.2f" .Ingresos}}</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<hr class="my-4">
+
+<h4>Acciones rápidas</h4>
+
+<div class="mt-3">
+
+    <a href="/usuarios" class="btn btn-primary me-2">
+        Usuarios
+    </a>
+
+    <a href="/productos" class="btn btn-success me-2">
+        Productos
+    </a>
+
+    <a href="/ventas" class="btn btn-warning me-2">
+         Ventas
+    </a>
+
+    <a href="/reportes" class="btn btn-dark">
+        Reportes
+    </a>
+
+</div>
+
+{{end}}

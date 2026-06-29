@@ -1,0 +1,79 @@
+{{define "content"}}
+
+<h2 class="mb-4">Registrar Venta</h2>
+
+<form method="POST" action="/ventas/crear">
+
+<div class="mb-3">
+
+<label class="form-label">
+Usuario
+</label>
+
+<select class="form-select" name="usuario">
+
+{{range .Usuarios}}
+
+<option value="{{.ID}}">
+
+{{.Nombre}}
+
+</option>
+
+{{end}}
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+Producto
+</label>
+
+<select class="form-select" name="producto">
+
+{{range .Productos}}
+
+<option value="{{.ID}}">
+
+{{.Nombre}}
+
+</option>
+
+{{end}}
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+Cantidad
+</label>
+
+<input
+type="number"
+name="cantidad"
+class="form-control"
+required>
+
+</div>
+
+<button class="btn btn-success">
+
+Guardar
+
+</button>
+
+<a href="/ventas" class="btn btn-secondary">
+
+Cancelar
+
+</a>
+
+</form>
+
+{{end}}
